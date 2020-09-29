@@ -17,3 +17,22 @@ function bigBorder(event) {
     }, 500);       
 }
 introimg.addEventListener('mouseover', bigBorder)
+
+const nav = document.querySelectorAll('.nav-link')
+
+nav.forEach(item => {
+    item.addEventListener('mousedown', navStyle)
+    function navStyle(event) {
+        item.style.fontSize = '4rem'
+        item.style.color = '#FF8C00'
+    }
+});
+
+nav.forEach(item => {
+    item.addEventListener('mouseup', navStyle)
+    function navStyle(event) {
+        item.style.fontSize = '1.6rem'
+        item.style.color = '#000'
+    }
+});
+
